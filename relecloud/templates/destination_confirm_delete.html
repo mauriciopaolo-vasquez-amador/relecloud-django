@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}
+ReleCloud - Delete Destination
+{% endblock %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <p>Are you sure you want to delete "{{ object }}"?</p>
+    <button type="submit" class="btn btn-danger">Confirm Delete</button>
+</form>
+{% endblock content %}
